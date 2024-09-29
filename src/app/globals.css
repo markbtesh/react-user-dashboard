@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  --background: #f3f4f6;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+#editor-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-height: 400px;
+  background: white;
+  border-radius: 5px;
+}
+
+
+.text-editor-toolbar {
+  background: #1e40af;
+  color: white;
+}
+
+
+.my-custom-quill-editor {
+  border: none; /* Remove default border */
+  border-radius: 16px; /* Round the edges */
+  background: linear-gradient(145deg, #2a2a2a, #1e1e1e); /* Gradient background for futuristic look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+.my-custom-quill-editor .ql-container {
+  background-color: #121212; /* Dark background for text area */
+  padding: 16px;
+  color: #ffffff;
+}
+
+.my-custom-quill-editor .ql-editor {
+  color: #e0e0e0; /* Light gray text for better readability */
+  line-height: 1.6;
+  font-size: 1rem; /* Modern font size */
+  min-height: 400px; /* Min height for the editor */
+}
+
+.my-custom-quill-editor .ql-editor p {
+  margin-bottom: 16px;
+}
+
+.my-custom-quill-editor .ql-editor blockquote {
+  border-left: 4px solid #00bcd4; /* Futuristic quote styling */
+  padding-left: 12px;
+  color: #b0bec5;
+}
+
+.my-custom-quill-editor .ql-editor a {
+  color: #1de9b6; /* Futuristic color for links */
+}
+
+.my-custom-quill-editor .ql-editor a:hover {
+  color: #00e676; /* Brighter hover state for links */
+}
+
+.my-custom-quill-editor .ql-editor strong {
+  color: #00e5ff; /* Strong text color */
+}
+.my-custom-quill-editor .ql-toolbar {
+  background: linear-gradient(to right, #00bcd4, #1de9b6); /* Gradient toolbar */
+  border-radius: 16px 16px 0 0;
+}
+
+.my-custom-quill-editor .ql-toolbar button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.my-custom-quill-editor .ql-toolbar button:hover {
+  color: #ff4081; /* Brighter color on hover */
+  transform: scale(1.1);
+}
+
+.my-custom-quill-editor .ql-editor {
+  background-color: #20232a; /* Dark background for futuristic look */
+  color: #e0e0e0;
+  min-height: 600px;
+  font-size: 1rem;
+  padding: 16px;
+}
+
+.my-custom-quill-editor .ql-editor p {
+  line-height: 1.5;
+}
+
+.my-custom-quill-editor .ql-editor a {
+  color: #00e5ff;
+  text-decoration: underline;
+}
+
+.my-custom-quill-editor .ql-toolbar {
+  background: linear-gradient(135deg, #e7e9fc, #f3f4ff); /* Light gradient */
+  border-bottom: 1px solid #d4d4d4;
+  padding: 10px;
+  border-radius: 16px 16px 0 0;
+}
+
+.my-custom-quill-editor .ql-toolbar button {
+  color: #5a67d8; /* Soft blue for professional accent */
+  transition: color 0.3s, transform 0.3s ease-in-out;
+}
+
+.my-custom-quill-editor .ql-toolbar button:hover {
+  color: #434190; /* Darker blue on hover */
+  transform: scale(1.1); /* Interactive hover effect */
+}
+
+
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.scroll-container {
+  transition: scroll-behavior 2s ease-in-out;
+}
+
+.client-card {
+  position: relative;
+}
+
+.expanded-info {
+  z-index: 50;
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*
+@media screen and (min-width: 480px) {
+  .news-card:nth-child(7n + 3) {
+      grid-column: auto/span 2;
+      grid-row: auto/span 2;
+  }
+  .news-card:nth-child(7n + 4) {
+    grid-column: auto/span 2;
+    grid-row: auto/span 2;
+}
+}*/
