@@ -1,6 +1,5 @@
-import { PrismaClient } from '@prisma/client';
+import prisma from '@/lib/Prisma';
 
-const prisma = new PrismaClient();
 
 // Get, update, or delete a task by ID
 export default async function handler(req, res) {

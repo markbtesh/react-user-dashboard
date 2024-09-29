@@ -43,6 +43,7 @@ const TechNewsCard = ({ news }) => {
           alt={news.title}
           layout="fill"
           objectFit="cover"
+          quality={50}
         />
       </div>
       <div  className=" rounded-lg shadow-lg -mt-4 max-h-[10rem] overflow-y-scroll no-scrollbar scroll-container" onMouseEnter={(e) => startAutoScroll(e.currentTarget)} 
