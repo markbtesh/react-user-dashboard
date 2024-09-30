@@ -102,7 +102,7 @@ const TechNewsFeed = ({ cards, columns }) => {
       setLoading(true);
       try {
         const response = await fetch(
-          `http://api.mediastack.com/v1/news?access_key=${API_KEY}&categories=technology&languages=en`
+          `https://api.mediastack.com/v1/news?access_key=${API_KEY}&categories=technology&languages=en`
         );
         const data = await response.json();
 
