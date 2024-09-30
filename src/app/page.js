@@ -11,6 +11,7 @@ const Dashboard = () => {
       
       <div className="p-4">
           <DashboardCards />
+    <h1>{process.env.DATABASE_URL}</h1>
         </div>
 
         <div className="p-4 grid grid-cols-2">
